@@ -8,7 +8,8 @@ from utils.util import Utilities
 class StateDistrictExtraction:
 
     def __init__(self):
-        self.headers_dict = Utilities.read_config('API', 'API_HEADER')
+        self.headers_dict = {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)Chrome/90.0.4430.93 Safari/537.36"}
         print(self.headers_dict)
         self.state_codes_location = Utilities.read_config('METADATA', 'STATE_CODES')
         self.district_codes_location = Utilities.read_config('METADATA', 'DISTRICT_CODES')
